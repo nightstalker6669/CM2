@@ -1,6 +1,6 @@
 -- /memory_store.lua
 local citizensData = {}
-local logger = require("/logger")
+local logger = require("logger")
 
 local M = {}
 

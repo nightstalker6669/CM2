@@ -1,7 +1,7 @@
 -- /debug_toggle.lua
 -- This script toggles the debug mode on or off.
 
-local logger = require("/logger")
+local logger = require("logger")
 
 local function toggleDebugMode(state)
     local mode = state:lower() == "on"

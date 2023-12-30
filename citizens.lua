@@ -1,7 +1,7 @@
 -- /citizens.lua
-local colonyIntegrator = require("/startup").colonyIntegrator
-local memoryStore = require("/memory_store")
-local logger = require("/logger")
+local colonyIntegrator = peripheral.find('colonyIntegrator')
+local memoryStore = require("memory_store")
+local logger = require("logger")
 
 local function getCitizens()
     logger.log("Retrieving citizens data")

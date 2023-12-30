@@ -1,7 +1,7 @@
 -- example_usage.lua
 -- Example usage of the api.lua script within the same Lua environment.
 
-local cm2API = require("/api")
+local cm2API = require("api")
 
 local function printCitizenInfo()
     local citizens = cm2API.getCitizenInfo()

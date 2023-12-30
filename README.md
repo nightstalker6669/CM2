@@ -1,24 +1,26 @@
 # CM2 Application
 
 ## Overview
-The CM2 application is a Lua script that facilitates interaction with the Minecolonies mod via the CC:tweaked mod and the colony integrator from the Advanced Peripherals mod in Minecraft. It provides a comprehensive method for gathering and supplying information about citizens in a Minecolonies colony.
+The CM2 application is a Lua script designed for the Minecraft mod CC:tweaked, enhancing the minecolonies experience. It interfaces with the colony integrator provided by the advanced peripherals mod to gather and supply data about a Minecolonies colony. Main functionalities include real-time citizen data retrieval and in-memory data management.
 
 ## Features
-- Information retrieval about citizens using `getCitizens()` function.
-- In-memory storage of citizen information.
-- Real-time data provision to other Lua scripts.
-- Detailed action logging and a toggleable debug mode.
+- Real-time retrieval of citizen information from a Minecolonies colony.
+- In-memory storage system for quick access and manipulation of citizen data.
+- A logging mechanism that records all actions made by the script.
+- Toggleable debug mode for advanced logging and troubleshooting.
 
 ## User Stories
-- Users can retrieve information about citizens in the colony.
-- The script avoids using persistent data storage, ensuring that data is held in memory only.
-- Real-time citizen information can be supplied to other Lua scripts on demand.
-- All script actions are logged for review.
-- Users can toggle the debug mode for additional logging details useful in troubleshooting.
+- Users can access information about citizens in a Minecraft colony through the `getCitizens()` function.
+- Citizen data is stored temporarily in memory, removed from persistence concerns.
+- Real-time citizen information is available for other Lua scripts.
+- Developers have access to a log of all script actions.
+- Debug mode can be easily activated for in-depth script analysis.
 
-## Technologies
-- Lua programming language.
-- Minecraft mods: CC:Tweaked, Advanced Peripherals, and Minecolonies.
+## Technologies Used
+- Lua Programming Language
+- CC:Tweaked (ComputerCraft modification)
+- Advanced Peripherals Mod
+- Minecolonies Mod
 
 ## File Structure
 ```
@@ -30,19 +32,31 @@ The CM2 application is a Lua script that facilitates interaction with the Mineco
 /logger.lua
 /debug_toggle.lua
 /commands/debug_command.lua
+/citizens/citizens.lua
+/citizens/get_formatted_citizen_data.lua
+/colony_data.lua
 ```
 
-## Usage
-Implement the CM2 script in your Minecraft modded environment to facilitate the collection and use of citizen information from your Minecolonies colony. Reference the `example_usage.lua` for a basic example of how to interact with the CM2 API.
+## Installation
+1. Install Minecraft with the aforementioned mods.
+2. Copy the provided Lua scripts into your ComputerCraft computer's directory.
+3. On the in-game computer, execute `/startup.lua` to activate the CM2 application.
 
-## Contributing
-Your contributions are welcome! If you'd like to improve the CM2 application or suggest features, please follow standard Github procedures by forking the repository, making changes, and submitting a pull request.
+## Usage
+For examples of the CM2 application usage, please refer to the `/example_usage.lua` script. This demonstrates how to interact with the CM2 API to perform tasks, such as retrieving citizen data in the Minecraft colony.
+
+## How to Contribute
+Contributions are welcome! To contribute:
+1. Fork the project repository.
+2. Create a new branch for your feature.
+3. Commit and push your changes to your branch.
+4. Submit a pull request with your changes.
 
 ## License
-The CM2 application is open source and freely available for modification and redistribution, in accordance with the MIT License.
+CM2 is open source and available under the MIT License - see the LICENSE file for details.
 
 ## Contact
-For issues, suggestions, or contributions, feel free to open an issue or pull request on the project's Github repository.
+For issues, feature requests, or contributions, please use the GitHub repository's issue tracker or pull request feature.
 
 ## Acknowledgements
-Special thanks to the creators and maintainers of CC:Tweaked, Advanced Peripherals, and Minecolonies mods, which made this project possible.
+A special thanks to the creators and communities of CC:Tweaked, Advanced Peripherals, and Minecolonies for making this integration possible.
